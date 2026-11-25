@@ -1,0 +1,20 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:zkn="urn:voorbeeldstad:zaken:v1"><soap:Body>
+<zkn:GeefZaakdetailsResponse>
+  <zkn:zaak>
+    <zkn:zaaknummer>ZAAK-2026-000123</zkn:zaaknummer>
+    <zkn:zaaktype code="OMG-BOUW">Omgevingsvergunning bouwen</zkn:zaaktype>
+    <zkn:status code="IN_BEHANDELING" datum="2026-11-02">In behandeling</zkn:status>
+    <zkn:startdatum>2026-10-14</zkn:startdatum>
+    <zkn:uiterlijkeEinddatum>2026-12-09</zkn:uiterlijkeEinddatum>
+    <zkn:behandelaar><zkn:naam>M. Jansen</zkn:naam><zkn:afdeling>Vergunningen</zkn:afdeling></zkn:behandelaar>
+    <zkn:initiator>
+      <zkn:bsn>999993653</zkn:bsn>
+      <zkn:naam>Fatima el Idrissi</zkn:naam>
+      <zkn:adres>Kerkstraat 12, 1234 AB Voorbeeldstad</zkn:adres>
+      <zkn:telefoon>06-12345678</zkn:telefoon>
+      <zkn:email>f.elidrissi@example.nl</zkn:email>
+    </zkn:initiator>
+    <zkn:toelichting>Fatima el Idrissi belde op 06-12345678 over de dakkapel. Tekening nagestuurd naar f.elidrissi@example.nl. Leges terugbetalen op NL91ABNA0417164300, BSN 999993653, adres 1234 AB.</zkn:toelichting>
+  </zkn:zaak>
+</zkn:GeefZaakdetailsResponse>
+</soap:Body></soap:Envelope>

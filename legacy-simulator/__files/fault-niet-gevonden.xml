@@ -1,0 +1,3 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:zkn="urn:voorbeeldstad:zaken:v1"><soap:Body>
+<soap:Fault><faultcode>soap:Client</faultcode><faultstring>ZaakNietGevonden</faultstring></soap:Fault>
+</soap:Body></soap:Envelope>

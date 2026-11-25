@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: agent-ready-legacy
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:mem:gateway;MODE=PostgreSQL}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  # Production: set SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI to the identity provider (e.g. Keycloak).
+  ai:
+    mcp:
+      server:
+        name: voorbeeldstad-zaken
+        version: 0.1.0
+        protocol: streamable
+        instructions: >
+          Tools voor medewerkers en assistenten van Gemeente Voorbeeldstad om de status van zaken
+          op te vragen. Geef altijd het doel van de aanvraag mee. Persoonsgegevens worden niet gedeeld.
+
+gateway:
+  zaaksysteem:
+    url: ${ZAAKSYSTEEM_URL:http://localhost:8089/zaaksysteem/ZaakService}
+    connect-timeout: 2s
+    read-timeout: 3s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

@@ -1,0 +1,20 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:zkn="urn:voorbeeldstad:zaken:v1"><soap:Body>
+<zkn:GeefZaakdetailsResponse>
+  <zkn:zaak>
+    <zkn:zaaknummer>ZAAK-2026-000456</zkn:zaaknummer>
+    <zkn:zaaktype code="PARK-VERG">Parkeervergunning bewoners</zkn:zaaktype>
+    <zkn:status code="AFGEHANDELD" datum="2026-11-18">Afgehandeld, vergunning verleend</zkn:status>
+    <zkn:startdatum>2026-11-04</zkn:startdatum>
+    <zkn:uiterlijkeEinddatum>2026-12-02</zkn:uiterlijkeEinddatum>
+    <zkn:behandelaar><zkn:naam>S. de Boer</zkn:naam><zkn:afdeling>Parkeren</zkn:afdeling></zkn:behandelaar>
+    <zkn:initiator>
+      <zkn:bsn>999990627</zkn:bsn>
+      <zkn:naam>Jan de Vries</zkn:naam>
+      <zkn:adres>Molenweg 3, 1234 CD Voorbeeldstad</zkn:adres>
+      <zkn:telefoon>+31 20 123 4567</zkn:telefoon>
+      <zkn:email>jan.devries@example.nl</zkn:email>
+    </zkn:initiator>
+    <zkn:toelichting>Vergunning per post verstuurd.</zkn:toelichting>
+  </zkn:zaak>
+</zkn:GeefZaakdetailsResponse>
+</soap:Body></soap:Envelope>

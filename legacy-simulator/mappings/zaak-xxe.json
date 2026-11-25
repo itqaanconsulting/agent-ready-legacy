@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/zaaksysteem/ZaakService",
+    "bodyPatterns": [ { "contains": "<zkn:zaaknummer>ZAAK-2026-000666</zkn:zaaknummer>" } ]
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "text/xml; charset=UTF-8" },
+    "bodyFileName": "xxe.xml"
+  }
+}

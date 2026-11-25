@@ -1,0 +1,5 @@
+gateway:
+  security:
+    dev-jwt-secret: test-secret-that-is-long-enough-for-hs256-signing
+  zaaksysteem:
+    read-timeout: 1s
