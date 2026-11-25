@@ -116,6 +116,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <!-- Configured by Spring Boot: writes a CycloneDX SBOM into the jar, scanned in CI. -->
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 </project>
