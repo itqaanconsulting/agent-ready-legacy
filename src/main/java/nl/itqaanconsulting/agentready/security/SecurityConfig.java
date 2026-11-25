@@ -1,5 +1,6 @@
 package nl.itqaanconsulting.agentready.security;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -37,6 +38,8 @@ public class SecurityConfig {
     @Bean
     @ConditionalOnProperty("gateway.security.dev-jwt-secret")
     JwtDecoder devJwtDecoder(@Value("${gateway.security.dev-jwt-secret}") String secret) {
+        LoggerFactory.getLogger(SecurityConfig.class).warn(
+                "Accepting tokens signed with the development secret. Never enable this outside local development.");
         return NimbusJwtDecoder
                 .withSecretKey(new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256"))
                 .build();

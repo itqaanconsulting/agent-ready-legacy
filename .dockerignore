@@ -1,0 +1,4 @@
+target/*
+!target/agent-ready-legacy-*.jar
+.git
+demo-agent
