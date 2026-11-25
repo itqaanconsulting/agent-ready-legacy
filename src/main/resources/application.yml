@@ -25,6 +25,16 @@ gateway:
     url: ${ZAAKSYSTEEM_URL:http://localhost:8089/zaaksysteem/ZaakService}
     connect-timeout: 2s
     read-timeout: 3s
+  # The agent registry: deny by default. Keys are OAuth2 client ids.
+  agents:
+    klantcontact-agent:
+      tools: [zaak_status, zaak_samenvatting]
+      doelen: [KLANTCONTACT]
+      requests-per-minute: 30
+    rapportage-agent:
+      tools: [zaak_status]
+      doelen: [RAPPORTAGE]
+      requests-per-minute: 10
 
 management:
   endpoints:

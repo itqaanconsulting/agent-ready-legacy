@@ -3,3 +3,8 @@ gateway:
     dev-jwt-secret: test-secret-that-is-long-enough-for-hs256-signing
   zaaksysteem:
     read-timeout: 1s
+  agents:
+    beperkte-agent:
+      tools: [zaak_status]
+      doelen: [KLANTCONTACT]
+      requests-per-minute: 2
