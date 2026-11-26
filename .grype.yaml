@@ -1,0 +1,10 @@
+# Vulnerability exceptions for the CI scan (anchore/scan-action reads this file).
+# Policy: an exception is only allowed when no patched version is available, must name the CVE
+# and the reason, and is removed as soon as the dependency can be upgraded (Dependabot opens the PR).
+ignore:
+  - vulnerability: CVE-2026-133325
+    package:
+      name: tomcat-embed-core
+      version: 11.0.29
+    # Fixed in Tomcat 11.0.30, which is not yet published on Maven Central (checked 2026-11-26).
+    # Scoped to 11.0.29, so any upgrade re-evaluates it automatically.
