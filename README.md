@@ -13,6 +13,22 @@ Municipalities want assistants and AI agents that can answer "what is the status
 
 This project is the layer in between: a Java integration gateway that exposes the legacy system to agents through the **Model Context Protocol (MCP)** and to internal applications through **REST**, and enforces the rules in the gateway itself, not in the prompt.
 
+
+**Demo (3 minutes, with voice-over in Dutch):*
+
+
+
+https://github.com/user-attachments/assets/b030199a-9ad6-4f5f-94e2-8b76eba5450e
+
+
+**English version:**
+
+
+
+https://github.com/user-attachments/assets/693db5be-a0a7-4a44-ab4a-3673110a3972
+
+
+
 ```mermaid
 flowchart LR
     A1[Customer-contact agent] -- MCP + JWT --> G
