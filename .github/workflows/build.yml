@@ -47,7 +47,7 @@ jobs:
           path: target
       - name: Start the stack
         run: docker compose up --detach --build
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.13'
       - name: Run the demo agent
