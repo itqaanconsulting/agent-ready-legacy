@@ -16,7 +16,7 @@ Scope: the gateway between AI agents (and internal applications) and the legacy 
 | T8 | A compromised or misbehaving legacy system returns malicious XML (XXE) | DOCTYPEs and external entities disabled in the parser | `SecureXmlParsingTest`, `refusesXmlWithExternalEntitiesFromTheLegacySystem` |
 | T9 | Personal data or forged entries end up in the audit trail | The audit trail stores no case content; agent-supplied values only when well-formed | `everyCallIsAuditedWithoutCaseContent` |
 | T10 | Error messages reveal internals of the legacy system | Fixed error texts and problem details; legacy faults are not passed on | `mapsLegacyFaultsToProblemDetails` |
-| T11 | A vulnerable dependency (supply chain) | CycloneDX SBOM on every build, scanned with Grype; the build fails on high or critical findings | CI |
+| T11 | A vulnerable dependency (supply chain) | CycloneDX SBOM on every build, scanned with Grype; the build fails on high or critical findings. Dependabot proposes upgrades daily. Exceptions only when no patched version exists, documented in `.grype.yaml` and scoped to the exact version | CI |
 | T12 | The development token secret is used in production | Only active when explicitly configured; logs a warning at startup | `SecurityConfig` |
 
 ## Residual risks
